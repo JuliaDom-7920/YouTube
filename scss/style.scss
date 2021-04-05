@@ -471,3 +471,37 @@ input:checked + .slider:before {
     outline: none;
   }
 }
+
+//==================================================================================================
+.search {
+  // .search__body
+  &__body {
+    display: flex;
+    justify-content: center;
+  }
+  // .search__input
+  &__input {
+    width: 400px;
+    margin-right: 20px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $primary-color;
+    outline: 0;
+    color: #181818;
+    font-size: 20px;
+    padding: 0 5px;
+
+    &:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+  // .search__btn
+  &__btn {
+    &.lock {
+      cursor: wait;
+      opacity: 0.5;
+      filter: grayscale(1);
+      pointer-events: none;
+    }
+  }
+}

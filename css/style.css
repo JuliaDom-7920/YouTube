@@ -593,3 +593,36 @@ input:checked + .slider:before {
 .yt-analytics input:focus {
   outline: none;
 }
+
+.search__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search__input {
+  width: 400px;
+  margin-right: 20px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #d42323;
+  outline: 0;
+  color: #181818;
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.search__input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search__btn.lock {
+  cursor: wait;
+  opacity: 0.5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  pointer-events: none;
+}
