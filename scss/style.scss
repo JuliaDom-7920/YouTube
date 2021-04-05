@@ -370,3 +370,14 @@ input:checked + .slider:before {
     }
   }
 }
+
+//==================================================================================================
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid #00000028;
+  p {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+}
