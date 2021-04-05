@@ -626,3 +626,49 @@ input:checked + .slider:before {
           filter: grayscale(1);
   pointer-events: none;
 }
+
+.result {
+  margin: 50px auto;
+}
+
+.result__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 1fr;
+      grid-template-columns: 250px 1fr;
+  row-gap: 40px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.result__name-column {
+  padding-bottom: 5px;
+}
+
+.result__text-column {
+  padding-bottom: 5px;
+  font-weight: 700;
+  line-height: 1.7em;
+  letter-spacing: 0.1em;
+}
+
+.result__text-column a {
+  color: inherit;
+}
+
+.result__text-column a:hover {
+  text-decoration: underline;
+}
+
+.result__icon {
+  width: 100px;
+  height: 100px;
+  grid-column: 2 span;
+}
+
+.result__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
