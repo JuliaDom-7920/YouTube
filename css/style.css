@@ -672,3 +672,53 @@ input:checked + .slider:before {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+body.theme-toggle #preloader {
+  background: #333;
+}
+
+@media (max-width: 900px) {
+  body.theme-toggle #preloader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 900px) {
+  #preloader {
+    display: none;
+  }
+}
+
+#preloader img {
+  width: 40%;
+  position: absolute;
+}
+
+@media (min-width: 1920px) {
+  #preloader img {
+    width: 50%;
+  }
+}
