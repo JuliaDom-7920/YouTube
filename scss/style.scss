@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@font-face {
+  font-family: Kenyc; 
+  src: url(/fonts/kenyc.ttf);
+}
+@import "_vars";
+
+.disaled {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 2px solid $primary-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 89.1%;
+}
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border: 2px solid $primary-color;
+  background: transparent;
+  color: #181818;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s;
+  outline: 0;
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/*body::-webkit-scrollbar-track {
+}*/
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 143, 143);
+  border-radius: 100px;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Montserrat";
+  height: 100%;
+}
+
+body {
+  transition: all 0.3s;
+
+  &.theme-toggle {
+    a {
+      color: #fff;
+    }
+    .btn {
+      color: #fff;
+    }
+    .btn:hover {
+      color: #181818;
+    }
+    .yt-analytics__btns button:hover a {
+      color: #181818;
+    }
+    .btn:hover {
+      border-color: #333;
+    }
+    input {
+      color: #fff;
+    }
+    background: #333;
+    color: #fff;
+    .header {
+      background: rgba(24, 24, 24, 0.2);
+      color: #fff;
+      box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .menu__item::before {
+      background: #fff;
+    }
+
+    .menu__link button#analytics {
+      background: url(/images/analytics-white.png) center center no-repeat;
+      background-size: 75%;
+    }
+    .menu__link button#settings {
+      background: url(/images/settings-white.png) center center no-repeat;
+      background-size: 75%;
+  }
+
+    .footer {
+      background: #181818;
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
