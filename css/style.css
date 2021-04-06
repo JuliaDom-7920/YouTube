@@ -602,6 +602,16 @@ input:checked + .slider:before {
   outline: none;
 }
 
+.settings__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__btns button {
+  margin: 0 20px;
+}
+
 .search__body {
   display: -webkit-box;
   display: -ms-flexbox;
