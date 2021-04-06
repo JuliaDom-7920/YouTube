@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Analytics | Шлях до кешу</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/youtube_logo.png" type="image/png">
+
+    <script src="https://apis.google.com/js/api.js"defer></script>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="../index.html" class="logo"><span><img width="30" src="../images/youtube_logo.png" alt="YouTube"></span><span>YouTube</span></a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="../select-item.html" class="menu__link" title="YouTube Аналітика"><button id="analytics"></button></a>
+              </li>
+              <li class="menu__item">
+                <a href="../settings.html" class="menu__link"title="YouTube Налаштування"><button id="settings"></button></a>
+              </li>
+            </ul>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <main>
+        <section class="settings section-page">
+          <div class="container">
+            <div class="yt-analytics__title">
+              <h2 class="yt-analytics__text">Шлях до кешу</h2>
+              <input class='search__input' type="search" placeholder="Поточний шлях"><br>
+              <input class='search__input' type="search" placeholder="Новий шлях">
+            </div>
+            <div class="search__body">
+              <div class="settings__btns">
+                <button class="search__btn btn">Підтвердити</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="result section-page">
+          <div class="container">
+            <div class="result__out">
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>
+            Web Developers <a href="https://github.com/DenysDevelopment">Maksymuck Denys</a>, <a href="https://github.com/7Taras7">Hlivchuk Taras</a> and <a href="https://github.com/JuliaDom-7920">Silchuk Yuliiya</a> 
+          </p>
+          <p>&copy; Copyright 2021. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

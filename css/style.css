@@ -612,6 +612,10 @@ input:checked + .slider:before {
   margin: 0 20px;
 }
 
+.settings input {
+  margin: 30px 0 20px;
+}
+
 .search__body {
   display: -webkit-box;
   display: -ms-flexbox;
