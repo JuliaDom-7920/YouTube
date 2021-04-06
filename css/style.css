@@ -32,7 +32,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 89.1%;
+  min-height: 100%;
 }
 
 body.lock {
@@ -482,6 +482,14 @@ input:checked + .slider:before {
 .footer p {
   padding: 5px 0;
   font-size: 12px;
+}
+
+.footer a {
+  color: #2196f3 !important;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .section-page {
