@@ -112,10 +112,10 @@ body {
       box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
     }
     .settings__block {
-      border: 1px solid rgb(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
     .settings__btns {
-      border-top: 1px solid rgb(255, 255, 255, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .menu__item::before {
@@ -499,7 +499,7 @@ input:checked + .slider:before {
     width: 450px;
     height: 300px;
     margin: 40px 0;
-    border: 1px solid rgb(51, 51, 51, 0.2);
+    border: 1px solid rgba(51, 51, 51, 0.2);
     border-radius: 10px;
   }
   // .settings__block-title
@@ -521,7 +521,7 @@ input:checked + .slider:before {
     justify-content: center;
     width: 100%;
     padding: 20px;
-    border-top: 1px solid rgb(51, 51, 51, 0.2);
+    border-top: 1px solid rgba(51, 51, 51, 0.2);
   }
   &__btns button {
     margin: 0 20px;
