@@ -130,6 +130,10 @@ body.theme-toggle .header {
           box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
 }
 
+body.theme-toggle .settings__block {
+  border: 1px solid #333;
+}
+
 body.theme-toggle .menu__item::before {
   background: #fff;
 }
