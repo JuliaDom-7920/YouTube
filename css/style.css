@@ -663,7 +663,7 @@ input:checked + .slider:before {
 }
 
 .settings #time {
-  display: block;
+  display: none;
   width: 50px;
 }
 
