@@ -42,13 +42,50 @@
           <div class="container">
             <div class="yt-analytics__title">
               <h2><b>YouTube</b> Налаштування</h2>
-              <p class="yt-analytics__text">Виберіть задачу</p>
+              <!-- <p class="yt-analytics__text">Виберіть задачу</p> -->
             </div>
-            <div class="yt-analytics__body">
+            <!-- <div class="yt-analytics__body">
               <div class="yt-analytics__btns" style="width: 530px;">
                 <button><a href="./components/use-cache.html">Використання кешу</a></button>
                 <button><a href="./components/src-cache.html">Шлях до кешу</a></button>
                 <button><a href="./components/use-time.html">Відображення затраченого часу на виконання</a></button>
+              </div>
+            </div> -->
+            <div class="settings__body">
+              <div class="settings__block">
+                <div class="setting__block-title">
+                  <h3>Використання кешу</h3>
+                  <p class="settings__block-text">Використовувати кеш?</p>
+                </div>
+                <div class="settings__btns">
+                  <button class="btn">Так</button>
+                  <button class="btn">Ні</button>
+                </div>
+              </div>
+
+              <div class="settings__block">
+                <div class="setting__block-title">
+                  <h3>Шлях до кешу</h3>
+                  <p class="settings__block-text">Поточний шлях</p>
+                </div>
+                <input class='search__input' type="text" placeholder="Поточний шлях">
+                <p class="settings__block-text">Новий шлях</p>
+                <input class='search__input' type="text" placeholder="Новий шлях">
+                <div class="settings__btns">
+                  <button class="search__btn btn">Підтвердити</button>
+                </div>
+              </div>
+
+              <div class="settings__block">
+                <div class="setting__block-title">
+                  <h3>Відображення затраченого часу на виконання</h3>
+                  <p class="settings__block-text">Відображати час?</p>
+                  <input id="time" class='search__input' type="text" placeholder="Час">
+                </div>
+                <div class="settings__btns">
+                  <button class="btn">Так</button>
+                  <button class="btn">Ні</button>
+                </div>
               </div>
             </div>
           </div>
