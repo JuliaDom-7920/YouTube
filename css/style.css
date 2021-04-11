@@ -75,8 +75,6 @@ body::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-/*body::-webkit-scrollbar-track {
-}*/
 body::-webkit-scrollbar-thumb {
   background-color: #8f8f8f;
   border-radius: 100px;
@@ -232,7 +230,6 @@ header {
     margin-left: 0;
   }
   .logo:hover span:nth-child(2) {
-    color: #000;
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
