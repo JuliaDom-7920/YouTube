@@ -6,11 +6,6 @@
 }
 @import "_vars";
 
-.disaled {
-  opacity: 0.5;
-  filter: grayscale(1);
-}
-
 *,
 *::before,
 *::after {
@@ -21,6 +16,13 @@
 
 *:focus-visible {
   outline: 2px solid $primary-color;
+}
+button:focus,
+a:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -34,10 +36,6 @@ body {
   }
 }
 
-a {
-  text-decoration: none;
-}
-
 .btn {
   padding: 0.5em 1em;
   border: 2px solid $primary-color;
@@ -46,7 +44,6 @@ a {
   cursor: pointer;
   font-size: 20px;
   transition: all 0.3s;
-  outline: 0;
 
   &:focus-visible {
     outline: 2px solid $primary-color;
@@ -102,10 +99,12 @@ body {
       color: #fff;
       box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
     }
-    .settings__block{
+    .settings__block,
+    .card-channel__block {
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
     .settings__btns,
+    .card-channel__btns,
     .result .row {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -150,6 +149,25 @@ body {
     button.header__add:active {
       background: url(/images/add-active.png) center center no-repeat;
       background-size: 65%;
+    }
+    button.card-channel__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background: url(/images/close-white.png) center center no-repeat;
+      background-size: 100%;
+      border: none;
+      cursor: pointer;
+    }
+    button.card-channel__close:hover {
+      background: url(/images/close-hover.png) center center no-repeat;
+      background-size: 100%;
+    }
+    button.card-channel__close:active {
+      background: url(/images/close-active.png) center center no-repeat;
+      background-size: 100%;
     }
     .footer {
       background: #181818;
@@ -251,10 +269,6 @@ header {
     cursor: pointer;
     transition: .33s;
   }
-  &__link button:focus,
-  button.header__add:focus {
-    outline: none;
-  }
   &__link button#analytics {
     background: url(/images/analytics.png) center center no-repeat;
     background-size: 75%;
@@ -345,6 +359,7 @@ input:checked + .slider:before {
 
 //==================================================================================================
 .hello {
+  display: none;
   padding: 100px 0;
 
   @media (max-width: 900px) {
@@ -629,7 +644,6 @@ input:checked + .slider:before {
       }
     }
   }
-
   &__icon {
     width: 100px;
     height: 100px;
@@ -704,3 +718,79 @@ body.theme-toggle #preloader {
     font-size: 15px;
   }
 }
+
+//==================================================================================================
+// .card-channel
+.card-channel {
+  display: block;
+  h2 {
+    padding: 30px 0;
+		text-align: center;
+		font-size: 35px;
+		font-weight: 400;
+  }
+  // .card-channel__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center; 
+  }
+  // .card-channel__block
+  &__block {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    margin: 40px 0;
+    text-align: center;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 10px;
+  }
+  // .card-channel__icon
+  &__icon {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 10px;
+    border-radius: 50%;
+  }
+  // .card-channel__title
+  &__title {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // .card-channel__btns
+  &__btns {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid rgba(51, 51, 51, 0.2);
+  }
+  &__btns button {
+    margin: 0 20px;
+    font-size: 16px;
+  }
+  // .card-channel__close
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: url(/images/close.png) center center no-repeat;
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+  }
+  &__close:hover {
+    background: url(/images/close-hover.png) center center no-repeat;
+    background-size: 100%;
+  }
+  &__close:active {
+    background: url(/images/close-active.png) center center no-repeat;
+    background-size: 100%;
+  }
+}
+
