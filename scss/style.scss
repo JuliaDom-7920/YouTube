@@ -651,3 +651,29 @@ body.theme-toggle #preloader {
     }
   }
 }
+
+//==================================================================================================
+.cash-save {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  height: 130px;
+  background: rgba(196, 196, 196, 0.2);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  padding: 20px 0;
+  // .cash-save__text
+  &__text {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  // .cash-save__button
+  &__button {
+    margin: 0 10px;
+    font-size: 15px;
+  }
+}
