@@ -207,7 +207,7 @@ const addBtnElem = document.querySelector(".header__add");
 addBtnElem.addEventListener("click", () => {
   new Modal({
     targetElem: ".header__add",
-    selectorOut: ".card-channel__body",
+    selectorOut: "body",
     html: htmlToModal(),
   }).create();
 });
@@ -229,7 +229,7 @@ function insert() {
     JSON.parse(localStorage.getItem("cards")).forEach((card, index) => {
       main.innerHTML += 
         `
-          <div class="card-channel__block" data-id="${index}">
+          <div class="card-channel__block">
             <button class="card-channel__close" data-id="${index}"></button>
             <div class="card-channel__icon">Icon</div>
             <div class="card-channel__title">Title</div>
