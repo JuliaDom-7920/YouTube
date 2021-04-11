@@ -99,18 +99,13 @@ body.theme-toggle {
   color: #fff;
 }
 
-body.theme-toggle a {
+body.theme-toggle a,
+body.theme-toggle .btn,
+body.theme-toggle input {
   color: #fff;
 }
 
-body.theme-toggle .btn {
-  color: #fff;
-}
-
-body.theme-toggle .btn:hover {
-  color: #181818;
-}
-
+body.theme-toggle .btn:hover,
 body.theme-toggle .yt-analytics__btns button:hover a {
   color: #181818;
 }
@@ -119,8 +114,8 @@ body.theme-toggle .btn:hover {
   border-color: #333;
 }
 
-body.theme-toggle input {
-  color: #fff;
+body.theme-toggle .header__add:hover {
+  border-color: #5c5c5c;
 }
 
 body.theme-toggle .header {
@@ -152,8 +147,28 @@ body.theme-toggle .menu__link button#analytics {
   background-size: 75%;
 }
 
+body.theme-toggle .menu__link button#analytics:hover {
+  background: url(/images/analytics-hover.png) center center no-repeat;
+  background-size: 75%;
+}
+
+body.theme-toggle .menu__link button#analytics:active {
+  background: url(/images/analytics-active.png) center center no-repeat;
+  background-size: 75%;
+}
+
 body.theme-toggle .menu__link button#settings {
   background: url(/images/settings-white.png) center center no-repeat;
+  background-size: 75%;
+}
+
+body.theme-toggle .menu__link button#settings:hover {
+  background: url(/images/settings-hover.png) center center no-repeat;
+  background-size: 75%;
+}
+
+body.theme-toggle .menu__link button#settings:active {
+  background: url(/images/settings-active.png) center center no-repeat;
   background-size: 75%;
 }
 
@@ -336,6 +351,10 @@ header {
 .menu__link button#settings:active {
   background: url(/images/settings-active.png) center center no-repeat;
   background-size: 75%;
+}
+
+.menu .header__add {
+  font-size: 16px;
 }
 
 .slider.round {
