@@ -24,6 +24,9 @@ a:focus {
 a {
   text-decoration: none;
 }
+input:focus {
+  outline: none;
+}
 
 .wrapper {
   display: flex;
@@ -84,13 +87,17 @@ body {
     input {
       color: #fff;
     }
-
     .btn:hover,
-    .yt-analytics__btns button:hover a {
+    .yt-analytics__btns button:hover a,
+    .input-card,
+    .add-card {
       color: #181818;
     }
     .btn:hover {
       border-color: #333;
+    }
+    .add-card:hover {
+      border-color: #bababa;
     }
     background: #333;
     color: #fff;
@@ -359,7 +366,7 @@ input:checked + .slider:before {
 
 //==================================================================================================
 .hello {
-  display: none;
+  display: block;
   padding: 100px 0;
 
   @media (max-width: 900px) {
@@ -524,9 +531,6 @@ input:checked + .slider:before {
     border-bottom: 2px solid $primary-color;
     font-size: 18px;
     background: transparent;
-  }
-  input:focus {
-    outline: none;
   }
 }
 
@@ -722,7 +726,7 @@ body.theme-toggle #preloader {
 //==================================================================================================
 // .card-channel
 .card-channel {
-  display: block;
+  display: none;
   h2 {
     padding: 30px 0;
 		text-align: center;
@@ -779,6 +783,7 @@ body.theme-toggle #preloader {
     right: 10px;
     width: 25px;
     height: 25px;
+    font-size: 14px;
     background: url(/images/close.png) center center no-repeat;
     background-size: 100%;
     border: none;
@@ -794,3 +799,85 @@ body.theme-toggle #preloader {
   }
 }
 
+//==================================================================================================
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    transform: translateX(-100%);
+    animation: fadeInLeft 0.5s forwards;
+  }
+
+  &__body {
+    position: relative;
+    width: 500px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    transform: translateX(100%);
+    animation: fadeInLeft 1s forwards;
+    overflow: auto;
+    color: #fff;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    background: transparent;
+    font-size: 40px;
+    border: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .input-card {
+    width: 280px;
+    margin: 30px 0 0 20px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    font-size: 16px;
+    background: transparent;
+  }
+  .add-card {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+  .add-card:hover {
+    border-color: #ffffffb3;
+  }
+}
+
+@keyframes fadeInLeft {
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes fadeInRight {
+  100% {
+    transform: translate(0);
+  }
+}
