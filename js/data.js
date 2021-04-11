@@ -1,4 +1,5 @@
-//datqa
+// Глобальна інформація про канал ========================================================
+
 let data;
 
 window.onload = function loadClient() {
@@ -45,9 +46,11 @@ function execute() {
       }
     );
 }
-gapi.load("client:auth2");
+gapi.load("client:auth2", function () {
+  gapi.auth2.init({ client_id: "YOUR_CLIENT_ID" });
+});
 
-//показання інформацію про канал
+// Показ інформації про канал
 function renderHTML() {
   execute();
   document.querySelector(".result__out").innerHTML = `
@@ -119,3 +122,6 @@ function renderHTML() {
 }
 
 document.querySelector(".search__btn").addEventListener("click", renderHTML);
+
+// Порівняння інформації про канал ========================================================
+
