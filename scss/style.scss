@@ -95,9 +95,6 @@ body {
     .btn:hover {
       border-color: #333;
     }
-    .header__add:hover {
-      border-color: #5c5c5c;
-    }
     background: #333;
     color: #fff;
     .header {
@@ -141,6 +138,18 @@ body {
     .menu__link button#settings:active {
       background: url(/images/settings-active.png) center center no-repeat;
       background-size: 75%;
+    }
+    button.header__add {
+      background: url(/images/add-white.png) center center no-repeat;
+      background-size: 65%;
+    }
+    button.header__add:hover {
+      background: url(/images/add-hover.png) center center no-repeat;
+      background-size: 65%;
+    }
+    button.header__add:active {
+      background: url(/images/add-active.png) center center no-repeat;
+      background-size: 65%;
     }
     .footer {
       background: #181818;
@@ -221,21 +230,20 @@ header {
     position: relative;
     list-style: none;
     align-self: center;
+    margin: 0 5px;
   }
-    & + & {
-      margin-left: 30px;
-      @media (max-width: 850px) {
-        margin-left: 10px;
-      }
-    }
   // .menu__link
-  &__link {
+  &__link,
+  button.header__add {
     color: inherit;
     font-weight: 700;
     font-size: 1em;
     padding: 0.5em 1em;
   }
-  &__link button {
+  &__link button,
+  button.header__add {
+    display: flex;
+    align-items: center;
     width: 40px;
     height: 40px;
     border: none;
@@ -243,7 +251,8 @@ header {
     cursor: pointer;
     transition: .33s;
   }
-  &__link button:focus {
+  &__link button:focus,
+  button.header__add:focus {
     outline: none;
   }
   &__link button#analytics {
@@ -270,8 +279,17 @@ header {
       background: url(/images/settings-active.png) center center no-repeat;
       background-size: 75%;
   }
-  .header__add {
-    font-size: 16px;
+  button.header__add {
+    background: url(/images/add.png) center center no-repeat;
+    background-size: 65%;
+  }
+  button.header__add:hover {
+    background: url(/images/add-hover.png) center center no-repeat;
+    background-size: 65%;
+  }
+  button.header__add:active {
+    background: url(/images/add-active.png) center center no-repeat;
+    background-size: 65%;
   }
 }
 

@@ -112,10 +112,6 @@ body.theme-toggle .btn:hover {
   border-color: #333;
 }
 
-body.theme-toggle .header__add:hover {
-  border-color: #5c5c5c;
-}
-
 body.theme-toggle .header {
   background: rgba(24, 24, 24, 0.2);
   color: #fff;
@@ -168,6 +164,21 @@ body.theme-toggle .menu__link button#settings:hover {
 body.theme-toggle .menu__link button#settings:active {
   background: url(/images/settings-active.png) center center no-repeat;
   background-size: 75%;
+}
+
+body.theme-toggle button.header__add {
+  background: url(/images/add-white.png) center center no-repeat;
+  background-size: 65%;
+}
+
+body.theme-toggle button.header__add:hover {
+  background: url(/images/add-hover.png) center center no-repeat;
+  background-size: 65%;
+}
+
+body.theme-toggle button.header__add:active {
+  background: url(/images/add-active.png) center center no-repeat;
+  background-size: 65%;
 }
 
 body.theme-toggle .footer {
@@ -287,26 +298,25 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin: 0 5px;
 }
 
-.menu + .menu {
-  margin-left: 30px;
-}
-
-@media (max-width: 850px) {
-  .menu + .menu {
-    margin-left: 10px;
-  }
-}
-
-.menu__link {
+.menu__link,
+.menu button.header__add {
   color: inherit;
   font-weight: 700;
   font-size: 1em;
   padding: 0.5em 1em;
 }
 
-.menu__link button {
+.menu__link button,
+.menu button.header__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
   border: none;
@@ -316,7 +326,8 @@ header {
   transition: .33s;
 }
 
-.menu__link button:focus {
+.menu__link button:focus,
+.menu button.header__add:focus {
   outline: none;
 }
 
@@ -350,8 +361,19 @@ header {
   background-size: 75%;
 }
 
-.menu .header__add {
-  font-size: 16px;
+.menu button.header__add {
+  background: url(/images/add.png) center center no-repeat;
+  background-size: 65%;
+}
+
+.menu button.header__add:hover {
+  background: url(/images/add-hover.png) center center no-repeat;
+  background-size: 65%;
+}
+
+.menu button.header__add:active {
+  background: url(/images/add-active.png) center center no-repeat;
+  background-size: 65%;
 }
 
 .slider.round {
